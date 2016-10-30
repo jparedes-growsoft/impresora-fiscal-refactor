@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls;
+  Dialogs, StdCtrls, printer_context, printer, citizen, epson;
 
 type
   TForm1 = class(TForm)
@@ -18,6 +18,8 @@ type
 
 var
   Form1: TForm1;
+  printerManager: TPrinterManager;
+  printer : TPrinter;
 
 implementation
 
@@ -25,7 +27,10 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-ShowMessage('Mi accion');
+  printer := TCitizen.Create;
+  printerManager := TPrinterManager.Create(printer);
+  printerManager.executePrint();
+
 end;
 
 end.

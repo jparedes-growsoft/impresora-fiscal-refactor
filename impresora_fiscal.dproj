@@ -52,6 +52,11 @@
 			<DCCReference Include="Unit1.pas">
 				<Form>Form1</Form>
 			</DCCReference>
+			<DCCReference Include="Unit2.pas"/>
+			<DCCReference Include="epson.pas"/>
+			<DCCReference Include="printer.pas"/>
+			<DCCReference Include="citizen.pas"/>
+			<DCCReference Include="printer_context.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
